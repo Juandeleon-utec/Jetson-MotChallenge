@@ -3,7 +3,7 @@
 ## Datos del Autor
 - **Nombre:** Juan De León  
 - **Institución:** Universidad Tecnológica del Uruguay (UTEC)  
-- **Cargo:** Docente e Investigador  
+- **Cargo:** Docente de incio en Iniciacion Cientifica.
 
 ## Artículo
 **Título:** Evaluación de Algoritmos de Detección y Seguimiento en Plataforma NVIDIA Jetson Nano usando MOTChallenge  
