@@ -1,0 +1,36 @@
+# Ultralytics ðŸš€ AGPL-3.0 License - https://ultralytics.com/license
+
+# Default Ultralytics settings for ByteTrack tracker when using mode="track"
+# For documentation and examples see https://docs.ultralytics.com/modes/track/
+# For ByteTrack source code see https://github.com/ifzhang/ByteTrack
+
+# ByteTrack custom tracking configuration for YOLOv8
+#tracker_type: bytetrack
+
+# detection score threshold (for initializing new tracks)
+#track_thresh: 0.35     # Puedes reducirlo a 0.25 si detecta poco
+
+# IoU threshold for associating tracks
+#match_thresh: 0.8
+
+# Time to live: frames to keep a lost track alive
+#track_buffer: 30       # Aumentar si hay oclusiones temporales
+
+# Frame-rate related compensation (solo si se usan tasas de fps distintas)
+#frame_rate: 30
+
+# MÃ­nimo tamaÃ±o de bbox (Ãºtil si hay mucho ruido en detecciones pequeÃ±as)
+#min_box_area: 10
+
+# Si quieres hacer pruebas comparativas con eliminaciÃ³n de duplicados:
+#mot20: false
+
+tracker_type: bytetrack
+track_high_thresh: 0.25      # Más sensible a detecciones débiles
+track_low_thresh: 0.1 # threshold for the second association
+new_track_thresh: 0.25
+match_thresh: 0.7       # Balance entre asociación y fragmentación
+track_buffer: 50        # Mayor tolerancia a oclusiones
+min_box_area: 50        # Filtra ruido en cajas pequeñas
+mot20: false
+fuse_score: True # Whether to fuse confidence scores with the iou distances before matching
